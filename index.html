@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>uprak portofolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav__wrap">
+      <a class="brand" href="#home">DAVIN ALVARO DPS<span>&bull;</span></a>
+      <nav class="nav__links">
+        <a href="#about" class="btn btn--sm">Tentang</a>
+        <a href="#projects" class="btn btn--sm">Project</a>
+        <a href="#contact" class="btn btn--sm">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero global-slide-up">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <img src="assets/WhatsApp Image 2025-11-10 at 08.18.42_e8eac2ac.jpg" alt="keyno"
+          style="width: 25%;height: 15%;border-radius: 20%;">
+        <p class="eyebrow">Junior Programmer</p>
+        <h1>HAI, SAYA <span class="accent">DAVIN ALVARO</span></h1>
+        <p class="lead">Saya adalah seorang junior programmer yang masih belajar mengoding.</p>
+      </div>
+      <div class="hero__image">
+        <img src="assets/images (1).jpg" alt="Workspace minimalis" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section section--alt global-slide-up">
+    <div class="container grid-2">
+      <div>
+        <h2>Tentang Saya</h2>
+        <p>saya adalah seorang junior programmer dan siswa hobi saya bermain basket dan lumayan suka makan atau nyemil.
+        </p>
+        <p>⚙ Skill Saya<br>
+
+          💻 Web Development<br>
+
+          <li>HML, CSS,
+          </li>
+        </p>
+      </div>
+      <div class="card">
+        <h3>Info Singkat</h3>
+        <ul class="list">
+          <li><strong>Lokasi:</strong> depok, Indonesia</li>
+          <li><strong>Fokus:</strong> UI/UX, Frontend</li>
+          <li><strong>Email:</strong> <a href="mailto:davin.adps@gmail.com">davin.adps@gmail.com</a></li>
+          <li><strong>GitHub:</strong> <a href="#">dupin-ui</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section global-slide-up">
+    <div class="container">
+      <div class="section__head">
+        <h2>Project Pilihan</h2>
+        <p class="muted">Tiga Project Utama</p>
+      </div>
+
+      <div class="cards three">
+        <article class="project">
+          <img class="project__img" src="assets/Screenshot 2025-11-10 070930.png" alt="Design System" />
+          <div class="project__body">
+            <h3>login page CSS</h3>
+            <p>membuat login page menggunakan Html & CSS.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span></div>
+          </div>
+        </article>
+
+        <article class="project">
+          <img class="project__img" src="assets/Screenshot 2025-11-10 080427.png" alt="Analytics" />
+          <div class="project__body">
+            <h3>kepala hellokity</h3>
+            <p>membuat kepala dari suatu karakter menggunakan html & css.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span></div>
+          </div>
+        </article>
+
+        <article class="project">
+          <img class="project__img" src="assets/Screenshot 2025-11-10 080653.png" alt="App-Jadwal" />
+          <div class="project__body">
+            <h3>login page tokopedia</h3>
+            <p>membuat login page tokopedia menggunakan html & css</p>
+            <div class="tags"><span>HTML</span><span>CSS</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section--alt global-slide-up">
+    <div class="container center">
+      <h2>Kontak</h2>
+      <p class="muted">Ingin kolaborasi? Silahkan kirim email,saya akan segera membalasmu ☺.</p>
+      <div class="actions">
+        <a class="btn" href="mailto:davin.adps@gmail.com">
+          Email Saya
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer global-slide-up">
+    <div class="container foot__wrap">
+      <small>© <span id="year"></span> Davin alvaro. Portofolio.</small>
+      <a class="link" href="#home">Kembali ke atas ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+
+</html>

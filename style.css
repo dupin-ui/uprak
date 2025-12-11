@@ -1,0 +1,370 @@
+/* ====== Tema Sederhana ====== */
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f7f8fb;
+  --text: #0f172a;
+  --muted: #475569;
+  --brand: #f3d8fb;
+  /* ganti warna brand di sini */
+  --border: #e5e7eb;
+  --radius: 16px;
+  --shadow: 0 10px 28px rgba(0, 76, 255, 0.06);
+}
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0
+}
+
+html {
+  scroll-behavior: smooth
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6
+}
+
+img {
+  max-width: 100%;
+  display: block
+}
+
+a {
+  color: inherit;
+  text-decoration: none
+}
+
+/* ====== Layout ====== */
+.container {
+  max-width: 1080px;
+  margin-inline: auto;
+  padding: 0 1.2rem
+}
+
+.section {
+  padding: 72px 0
+}
+
+.section--alt {
+  background: var(--bg-alt)
+}
+
+.center {
+  text-align: center
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 24px
+}
+
+@media (max-width:960px) {
+  .grid-2 {
+    grid-template-columns: 1fr
+  }
+}
+
+.section__head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px
+}
+
+.muted {
+  color: var(--muted)
+}
+
+/* ====== Nav ====== */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(255, 255, 255, .85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border)
+}
+
+.nav__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0
+}
+
+.brand {
+  font-weight: 800;
+  letter-spacing: .3px
+}
+
+.brand span {
+  color: var(--brand)
+}
+
+.nav__links {
+  display: flex;
+  gap: 18px;
+  align-items: center
+}
+
+.nav__links a {
+  color: #334155
+}
+
+.nav__links a:hover {
+  color: #0f172a
+}
+
+/* ====== Hero ====== */
+.hero {
+  padding: 50px 0;
+  background: linear-gradient(180deg, #fff, #fafbff)
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 28px;
+  align-items: center
+}
+
+@media (max-width:960px) {
+  .hero__grid {
+    grid-template-columns: 1fr
+  }
+}
+
+.eyebrow {
+  font-size: .92rem;
+  color: var(--muted)
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  margin: 8px 0 10px
+}
+
+.hero .lead {
+  color: var(--muted);
+  max-width: 620px
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px
+}
+
+.hero__image {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow)
+}
+
+.hero__image img {
+  aspect-ratio: 4/3;
+  object-fit: cover
+}
+
+/* ====== Cards / Blocks ====== */
+.card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  background: #fff;
+  box-shadow: var(--shadow)
+}
+
+.list {
+  margin: 0;
+  padding-left: 18px
+}
+
+.list li {
+  margin: 6px 0
+}
+
+/* ====== Buttons ====== */
+.btn {
+  display: inline-block;
+  background: var(--brand);
+  color: #062;
+  /* darker text on green */
+  font-weight: 700;
+  border-radius: 12px;
+  border: 1px solid rgba(248, 17, 17, 0.04);
+  padding: 10px 14px;
+  box-shadow: 0 10px 22px rgba(16, 185, 129, .25);
+  background-color: rgba(233, 233, 15, 0.653);
+  transition: filter .5s ease
+}
+
+.btn:hover {
+  filter: brightness(.90)
+}
+
+.btn--ghost {
+  background: #fff;
+  color: #0f172a;
+  border: 1px solid var(--border);
+  box-shadow: none
+}
+
+.btn--sm {
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  background-color: b;
+}
+
+/* ====== Projects ====== */
+.cards {
+  display: grid;
+  gap: 16px
+}
+
+.cards.three {
+  grid-template-columns: repeat(3, 1fr)
+}
+
+@media (max-width:960px) {
+  .cards.three {
+    grid-template-columns: repeat(2, 1fr)
+  }
+}
+
+@media (max-width:640px) {
+  .cards.three {
+    grid-template-columns: 1fr
+  }
+}
+
+.project {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: var(--shadow);
+  transition: transform .12s ease
+}
+
+.project:hover {
+  transform: translateY(-10px)
+}
+
+.project__img {
+  aspect-ratio: 16/9;
+  object-fit: cover
+}
+
+.project__body {
+  padding: 14px
+}
+
+.project__body h3 {
+  margin: 0 0 6px
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px
+}
+
+.tags span {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: .8rem;
+  color: #334155
+}
+
+/* ====== Footer ====== */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 20px 0;
+  background: #fff
+}
+
+.foot__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px
+}
+
+@media (max-width:640px) {
+  .foot__wrap {
+    flex-direction: column
+  }
+}
+
+.link {
+  color: #334155
+}
+
+.link:hover {
+  text-decoration: underline
+}
+
+/* ====== Aksen ====== */
+.accent {
+  position: relative
+}
+
+.accent::after {
+  content: \"\";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2px;
+  height: 10px;
+  background: linear-gradient(90deg, rgba(0, 255, 170, 0.25), rgba(16, 185, 129, .1));
+  z-index: -1;
+  border-radius: 6px;
+}
+
+/* ====== ANIMASI GLOBAL: Semua komponen muncul dari bawah ====== */
+
+.global-slide-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: globalSlideUp 0.9s ease forwards;
+}
+
+@keyframes globalSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====== ANIMASI NAVBAR SLIDE-DOWN ====== */
+
+.nav {
+  animation: slideDown 0.6s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
